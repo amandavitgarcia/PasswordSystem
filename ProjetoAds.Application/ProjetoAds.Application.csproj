@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DTO\Request\Category\**" />
+    <Compile Remove="DTO\Request\Evaluation\**" />
+    <Compile Remove="DTO\Response\Category\**" />
+    <Compile Remove="DTO\Response\Evaluation\**" />
+    <Compile Remove="Mappers\**" />
+    <EmbeddedResource Remove="DTO\Request\Category\**" />
+    <EmbeddedResource Remove="DTO\Request\Evaluation\**" />
+    <EmbeddedResource Remove="DTO\Response\Category\**" />
+    <EmbeddedResource Remove="DTO\Response\Evaluation\**" />
+    <EmbeddedResource Remove="Mappers\**" />
+    <None Remove="DTO\Request\Category\**" />
+    <None Remove="DTO\Request\Evaluation\**" />
+    <None Remove="DTO\Response\Category\**" />
+    <None Remove="DTO\Response\Evaluation\**" />
+    <None Remove="Mappers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjetoAds.CrossCutting\ProjetoAds.CrossCutting.csproj" />
+    <ProjectReference Include="..\ProjetoAds.Domain\ProjetoAds.Domain.csproj" />
+    <ProjectReference Include="..\ProjetoAds.Infraestructure\ProjetoAds.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\" />
+    <Folder Include="Contracts\" />
+  </ItemGroup>
+
+</Project>
